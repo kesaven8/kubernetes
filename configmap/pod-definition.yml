@@ -11,3 +11,9 @@ spec:
       envFrom:
         - configMapRef:
             name: app-config
+      env:
+        - name: VALUE
+          valueFrom:
+            configMapKeyRef:
+              key: VALUE
+              name: app-config
